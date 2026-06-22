@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmacia | Turnos Online</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            farmacia: '#1D9E75',
+            suave: '#6EA7C7',
+            fondo: '#F4FBF9',
+            card: '#FFFFFF',
+            creator: '#7C3AED'
+          },
+          boxShadow: {
+            suave: '0 18px 40px rgba(15, 23, 42, 0.08)'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-fondo text-slate-900">
+  <div id="root" class="min-h-screen"></div>
+
+  <!-- React -->
+  <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Firebase (modular compat UMD) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+  <!-- Babel (versión moderna fija, soporta optional chaining ?.) -->
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.7/babel.min.js"></script>
+
+  <!-- App -->
+  <script type="text/babel" src="js.js"></script>
+</body>
+</html>
