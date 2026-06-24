@@ -2,6 +2,9 @@
 
 :root {
   color-scheme: light;
+  --oftalmo: #0E7490;
+  --suave: #38BDF8;
+  --fondo: #F0F9FF;
 }
 
 html {
@@ -57,6 +60,14 @@ input[type='date'] {
 .badge-admin       { background: #EEF2FF; color: #3730A3; }
 .badge-creator     { background: #F5F3FF; color: #6D28D9; }
 .badge-creador     { background: #F5F3FF; color: #6D28D9; }
+
+/* ── Utilidades de color Oftalmo ──────────────── */
+.text-oftalmo      { color: var(--oftalmo); }
+.bg-oftalmo        { background-color: var(--oftalmo); }
+.border-oftalmo    { border-color: var(--oftalmo); }
+.hover\:border-oftalmo:hover  { border-color: var(--oftalmo); }
+.focus\:border-oftalmo:focus  { border-color: var(--oftalmo); }
+.ring-oftalmo      { --tw-ring-color: var(--oftalmo); }
 
 /* ── Panel del Creador ────────────────────────── */
 .creator-header {

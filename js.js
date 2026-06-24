@@ -27,11 +27,11 @@ const db   = firebase.firestore();
 //  CONSTANTES DE DOMINIO
 // ─────────────────────────────────────────────────────────
 const services = [
-  { id: 'Vacunación',               label: 'Vacunación' },
-  { id: 'Toma de presión',          label: 'Toma de presión' },
-  { id: 'Atención farmacéutica',    label: 'Atención farmacéutica' },
-  { id: 'Aplicación de inyectables',label: 'Aplicación de inyectables' },
-  { id: 'Consultas',                label: 'Consultas' }
+  { id: 'Examen de la vista',              label: 'Examen de la vista' },
+  { id: 'Control de glaucoma',             label: 'Control de glaucoma' },
+  { id: 'Adaptación de lentes de contacto',label: 'Adaptación de lentes de contacto' },
+  { id: 'Consulta pre-quirúrgica',         label: 'Consulta pre-quirúrgica' },
+  { id: 'Consultas oftalmológicas',        label: 'Consultas oftalmológicas' }
 ];
 
 const timeSlots = [
@@ -583,7 +583,7 @@ function App() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wider opacity-80">Panel del Creador</p>
-            <h1 className="mt-2 text-2xl font-semibold">Farmacia Premium</h1>
+            <h1 className="mt-2 text-2xl font-semibold">Centro Oftalmológico</h1>
             <p className="mt-1 text-sm opacity-70">Control total del sistema</p>
           </div>
           <div className="flex items-center gap-3">
@@ -669,7 +669,7 @@ function App() {
       <header className="rounded-[32px] bg-white px-6 py-6 shadow-suave sm:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-farmacia">Farmacia Premium</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-farmacia">Centro Oftalmológico</p>
             <h1 className="mt-2 text-2xl font-semibold text-slate-900">
               Hola, {perfil?.nombre || user?.email}
             </h1>
@@ -890,9 +890,9 @@ function App() {
         {/* Hero */}
         <section className="space-y-6 rounded-[32px] bg-white px-6 py-8 shadow-suave sm:px-10">
           <div>
-            <span className="inline-flex items-center rounded-full bg-farmacia/10 px-3 py-1 text-sm font-semibold text-farmacia">Farmacia Premium</span>
+            <span className="inline-flex items-center rounded-full bg-farmacia/10 px-3 py-1 text-sm font-semibold text-farmacia">Centro Oftalmológico</span>
             <h1 className="mt-5 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">Sistema de turnos online</h1>
-            <p className="mt-3 text-sm leading-7 text-slate-600">Reservá turnos para vacunación, consultas y atención farmacéutica. Disponibilidad en tiempo real.</p>
+            <p className="mt-3 text-sm leading-7 text-slate-600">Reservá turnos para exámenes de la vista, controles y consultas oftalmológicas. Disponibilidad en tiempo real.</p>
           </div>
           <div className="rounded-[24px] border border-slate-200 bg-fondo p-5 space-y-3">
             <div className="flex items-start gap-3">
@@ -952,7 +952,7 @@ function App() {
   if (view === 'loading') return (
     <div className="flex min-h-screen items-center justify-center bg-fondo">
       <div className="text-center loading-pulse">
-        <p className="text-2xl font-semibold text-farmacia">Farmacia Premium</p>
+        <p className="text-2xl font-semibold text-farmacia">Centro Oftalmológico</p>
         <p className="mt-2 text-sm text-slate-500">Iniciando sesión…</p>
       </div>
     </div>
